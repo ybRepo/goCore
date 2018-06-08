@@ -6,9 +6,8 @@ import (
 )
 
 //the variables declared at the package level can be out of order and therefore appear at the end.
-var x int = 42
-var z int = 1
-
+var x = 42
+var z = 1
 
 //main function that prints the variable x within package main scope
 func main() {
@@ -32,4 +31,3 @@ func main() {
 func foo() {
 	fmt.Println(x + z)
 }
-

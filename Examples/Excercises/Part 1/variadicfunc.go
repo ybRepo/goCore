@@ -8,11 +8,11 @@ func main() {
 
 }
 
-func max(numbers ...int ) int {
+func max(numbers ...int) int {
 	var largest int
 
-	for _, v :=range numbers{
-		if v > largest{
+	for _, v := range numbers {
+		if v > largest {
 			largest = v
 		}
 	}

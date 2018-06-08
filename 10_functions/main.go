@@ -19,10 +19,10 @@ func greet2(fname, lname string) { //multiple argument, no return
 	fmt.Println(fname, lname)
 }
 
-func sprint(fname, lname string) string {				//multiple arguments, single return
+func sprint(fname, lname string) string { //multiple arguments, single return
 	return fmt.Sprint("Welcome ", fname, lname)
 }
 
-func multisprint(fname, lname string) (string, string) {		//multiple arguments and returns
+func multisprint(fname, lname string) (string, string) { //multiple arguments and returns
 	return fmt.Sprint(fname, lname), fmt.Sprint(lname, fname)
 }

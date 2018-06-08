@@ -29,5 +29,5 @@ func makeslice() {
 	records = append(records, "Sunday")
 
 	fmt.Println(records[0:6])
-	fmt.Println(len(records),cap(records))
+	fmt.Println(len(records), cap(records))
 }

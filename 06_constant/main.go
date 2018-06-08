@@ -8,13 +8,13 @@ const (
 	c = true
 )
 
-const z string = "a typed constant, while the previous were untype constants since their types were not defined"
+const z = "a typed constant, while the previous were untype constants since their types were not defined"
 
 func main() {
 	const x = "death & taxes"
 	fmt.Println(x)
 	fmt.Println(a)
 	fmt.Println(b)
-	fmt.Println(true)
+	fmt.Println(c)
 	fmt.Println(z)
 }

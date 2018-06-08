@@ -32,7 +32,7 @@ func updatemap() {
 }
 
 func deletemapkey() {
-	delete(myGreeting,"Harleen")
+	delete(myGreeting, "Harleen")
 }
 
 func litteralmap() { //this is the alternate way of creating maps where values are defined

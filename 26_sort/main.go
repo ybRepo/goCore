@@ -20,7 +20,6 @@ func main() {
 	fmt.Println(studyGroup)
 	sort.Sort(sort.Reverse(sort.StringSlice(studyGroup)))
 
-
 	fmt.Println(studyGroup)
 
 	useinterface() //a much easier way to sort the list is to call the sort.Strings method

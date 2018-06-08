@@ -10,7 +10,7 @@ func main() {
 	swim()
 }
 
-const metersToYards float64 = 1.09361
+const metersToYards = 1.09361
 
 func swim() {
 	var meters float64

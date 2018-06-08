@@ -23,8 +23,6 @@ func getCard() {
 	cards = append(cards, row1)
 	cards = append(cards, row2)
 
-
-
 	// Access an element.
 	fmt.Println("First element")
 	fmt.Println(cards[0][1])
@@ -33,4 +31,3 @@ func getCard() {
 	fmt.Println("Values")
 	fmt.Println(cards)
 }
-

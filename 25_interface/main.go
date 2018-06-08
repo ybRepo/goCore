@@ -5,15 +5,18 @@ import (
 	"math"
 )
 
+//Shape requires a comment because it is exported
 type Shape interface { //since the methods for Circle and Square have the same signature "area() float64" a new type Shape of type interface can be created.
 	area() float64 //this interface calls the area function and returns float64
 	//interfaces are types that declare behaviour. The behaviour is never implemented by the inferece type directly, but instead by user defined types via methods.
 }
 
+//Square requires a comment because it is exported
 type Square struct { //create a new type called square with field side
 	side float64
 }
 
+//Circle requires a comment because it is exported
 type Circle struct { //create new type called circle with field radius
 	radius float64
 }

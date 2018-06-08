@@ -45,7 +45,7 @@ func continueloop() {
 	for {
 		i++
 		if i%2 == 0 {
-			continue	//continue loops through the condition until a value is false
+			continue //continue loops through the condition until a value is false
 		}
 		fmt.Println(i)
 		if i >= 10 {

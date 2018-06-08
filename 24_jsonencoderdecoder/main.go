@@ -2,9 +2,9 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"strings"
-	"fmt"
 )
 
 type person struct {
@@ -19,15 +19,15 @@ func main() {
 
 }
 
-func encodejson(){
+func encodejson() {
 	p1 := person{"James", "Bond", 20}
 	json.NewEncoder(os.Stdout).Encode(p1)
 }
 
-func decodejson(){
+func decodejson() {
 	var p2 person
 	rdr := strings.NewReader(`{"First":"James","Last":"Bond", "Age":20}`)
 	json.NewDecoder(rdr).Decode(&p2)
 
-	fmt.Println(p2.First, p2.Last,p2.Age)
-	}
+	fmt.Println(p2.First, p2.Last, p2.Age)
+}
