@@ -1,0 +1,2 @@
+2018/06/13 19:15:46 err happened open no-file.txt: no such file or directory
+2018/06/13 19:15:46 0 norgate math: square root of negative number
