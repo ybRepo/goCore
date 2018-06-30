@@ -3,6 +3,27 @@ package main
 import "fmt"
 
 func main() {
+	basicCase()
+	rollCall()
+
+}
+
+
+func basicCase(){
+	i := 2
+	fmt.Print("Write ", i, " as ")
+	switch i {
+	case 1:
+		fmt.Println("one")
+	case 2:
+		fmt.Println("two")
+	case 3:
+		fmt.Println("three")
+	}
+}
+
+
+func rollCall(){
 	name := make([]string, 4)
 
 	name[0] = "Mehdi"
@@ -34,5 +55,4 @@ func main() {
 			fmt.Println("All", len(name), "students are accounted for, welcome to Golang!")
 		}
 	}
-
 }

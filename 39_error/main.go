@@ -1,11 +1,11 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"log"
-	"os"
 	"math"
-	"errors"
+	"os"
 )
 
 func init() {
@@ -18,7 +18,20 @@ func init() {
 
 func main() {
 	openfile()
-	log.Println(sqrt(-5.0))
+
+	x, err := sqrt(25)
+	if err != nil {
+		log.Println(err)
+	} else {
+		fmt.Println(x)
+	}
+
+	y, err := negativeVal(-5)
+	if err != nil {
+		log.Println(err)
+	} else {
+		fmt.Println(y)
+	}
 
 }
 
@@ -32,13 +45,20 @@ func openfile() {
 	}
 }
 
+func sqrt(f float64) (float64, error) {
+	ErrCustom := errors.New("norgate math: square root of negative number")
+	if f < 0 {
 
-func sqrt(f float64) (float64, error){
-	err := errors.New("norgate math: square root of negative number")
-	if f<0{
-		//log.Println(err)					//should i be logging the err at this time or is it better to wrap the method in main with when calling the function sqrt() as seen in line 21?
-		return 0, err
+		return 0, ErrCustom
 
 	}
-		return math.Sqrt(f), nil
+	return math.Sqrt(f), nil
+}
+
+func negativeVal(y int) (int, error) {
+	ErrNegativeVal := fmt.Errorf("This err includes more details as it includes the negative number: %v", y)
+	if y < 0 {
+		return 0, ErrNegativeVal
+	}
+	return y, nil
 }
