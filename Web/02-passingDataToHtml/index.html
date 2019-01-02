@@ -1,0 +1,16 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+<!-- A variable {{$name}} to hold the latest data. Since this example passes a single int, {{.}} could have been put directly into <h1> -->
+    {{$val := .}}
+    <h1> The meaning of life is: {{$val}}!</h1>
+</body>
+</html>

@@ -1,0 +1,18 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Our school has the following students:</h1>
+    <!-- In this case, we range over the slice, and for each, we create an <li> containing the struct field names {Fname, Lname, Program} <h1> -->
+    {{range .}}
+    <li> {{.Fname}} {{.Lname}} - {{.Program}}!</li>
+    {{end}}
+</body>
+</html>

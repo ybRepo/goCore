@@ -1,0 +1,20 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- Pass the time to the client, however, this is a case where we would want to run a function that formats the time -->
+    <h1> The time is: {{.}} </h1>
+
+    <!-- either method works, the first is pipelining. Taking the output of one and pasing it as an input into a function. This can go n times. -->
+    <h1> The time is: {{. | mdy }} </h1>
+    <!-- the second method is to simply pass the current data (time.now) directly into the function. -->
+    <h1> or when there is a single value it makes sense to just {{mdy .}}</h1>
+</body>
+</html>

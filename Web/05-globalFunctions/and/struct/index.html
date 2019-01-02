@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- first example -->
+    {{range .}}
+        {{.}}
+    {{end}}
+
+    <!-- second example truthy/falsy checks if data exists-->
+    {{if .}}
+        {{.}}
+    {{end}}
+
+    <!-- third example range over the data, if data.Name exists, print data.Name-->
+    {{range .}}
+        {{if .Name}}
+            example 3 - {{.Name}}
+        {{end}}
+    {{end}}
+
+    <!-- fourth example to check if data exists in Name and Program -->
+    {{range .}}
+        {{if and .Name .Program}}
+            Name: {{.Name}} is taking Program: {{.Program}}
+        {{end}}
+    {{end}}
+
+</body>
+</html>
